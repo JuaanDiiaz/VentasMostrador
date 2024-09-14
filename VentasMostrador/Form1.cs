@@ -48,6 +48,7 @@ namespace VentasMostrador
             }
             catch (Exception ex)
             {
+                pictureBoxArticulo.Image = null;
                 MessageBox.Show($"Error al cargar la imagen: {ex.Message}");
             }
         }
@@ -63,7 +64,8 @@ namespace VentasMostrador
                 boton.Dock = DockStyle.Top;
                 boton.AutoSize = true;
                 boton.FlatStyle = FlatStyle.Flat;  // Estilo plano
-                boton.FlatAppearance.BorderSize = 0;  // Sin borde
+                boton.FlatAppearance.BorderSize = 1;  // Sin borde
+                boton.FlatAppearance.BorderColor = Color.White;  // Color de borde
                 boton.BackColor = Color.FromArgb(0, 122, 204);  // Color de fondo
                 boton.ForeColor = Color.White;  // Color de texto
                 boton.Font = new Font("Segoe UI", 12F, FontStyle.Bold);  // Fuente moderna

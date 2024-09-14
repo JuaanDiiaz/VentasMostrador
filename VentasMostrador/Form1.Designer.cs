@@ -2,15 +2,8 @@
 {
     partial class Form1
     {
-        /// <summary>
-        ///  Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        ///  Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,12 +13,6 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
-
-        /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
@@ -75,6 +62,7 @@
             // 
             // panelMenuLateral
             // 
+            panelMenuLateral.BackColor = Color.FromArgb(240, 240, 240);
             panelMenuLateral.Controls.Add(panelResultadoBusqueda);
             panelMenuLateral.Controls.Add(panelBusqueda);
             panelMenuLateral.Controls.Add(buttonCancelar);
@@ -83,88 +71,101 @@
             panelMenuLateral.Dock = DockStyle.Left;
             panelMenuLateral.Location = new Point(0, 0);
             panelMenuLateral.Name = "panelMenuLateral";
-            panelMenuLateral.Size = new Size(200, 648);
+            panelMenuLateral.Size = new Size(250, 648);
             panelMenuLateral.TabIndex = 0;
             // 
             // panelResultadoBusqueda
             // 
             panelResultadoBusqueda.AutoScroll = true;
             panelResultadoBusqueda.Dock = DockStyle.Fill;
-            panelResultadoBusqueda.Location = new Point(0, 187);
+            panelResultadoBusqueda.Location = new Point(0, 200);
             panelResultadoBusqueda.Name = "panelResultadoBusqueda";
-            panelResultadoBusqueda.Size = new Size(200, 415);
+            panelResultadoBusqueda.Size = new Size(250, 402);
             panelResultadoBusqueda.TabIndex = 7;
             // 
             // panelBusqueda
             // 
+            panelBusqueda.BackColor = Color.FromArgb(230, 230, 230);
             panelBusqueda.Controls.Add(textBoxBusqueda);
             panelBusqueda.Controls.Add(buttonBusqueda);
             panelBusqueda.Dock = DockStyle.Top;
-            panelBusqueda.Location = new Point(0, 162);
+            panelBusqueda.Location = new Point(0, 175);
             panelBusqueda.Name = "panelBusqueda";
-            panelBusqueda.Size = new Size(200, 25);
+            panelBusqueda.Size = new Size(250, 25);
             panelBusqueda.TabIndex = 6;
             // 
             // textBoxBusqueda
             // 
             textBoxBusqueda.Dock = DockStyle.Fill;
-            textBoxBusqueda.Location = new Point(53, 0);
+            textBoxBusqueda.Location = new Point(59, 0);
             textBoxBusqueda.Name = "textBoxBusqueda";
-            textBoxBusqueda.Size = new Size(147, 23);
+            textBoxBusqueda.Size = new Size(191, 23);
             textBoxBusqueda.TabIndex = 6;
             textBoxBusqueda.KeyDown += textBoxBusqueda_KeyDown;
             // 
             // buttonBusqueda
             // 
+            buttonBusqueda.BackColor = Color.FromArgb(33, 150, 243);
             buttonBusqueda.Dock = DockStyle.Left;
+            buttonBusqueda.FlatStyle = FlatStyle.Flat;
+            buttonBusqueda.ForeColor = Color.White;
             buttonBusqueda.Location = new Point(0, 0);
             buttonBusqueda.Name = "buttonBusqueda";
-            buttonBusqueda.Size = new Size(53, 25);
+            buttonBusqueda.Size = new Size(59, 25);
             buttonBusqueda.TabIndex = 5;
-            buttonBusqueda.Text = "buscar";
-            buttonBusqueda.UseVisualStyleBackColor = true;
+            buttonBusqueda.Text = "Buscar";
+            buttonBusqueda.UseVisualStyleBackColor = false;
             buttonBusqueda.Click += buttonBusqueda_Click;
             // 
             // buttonCancelar
             // 
+            buttonCancelar.BackColor = Color.FromArgb(33, 150, 243);
             buttonCancelar.Dock = DockStyle.Bottom;
+            buttonCancelar.FlatStyle = FlatStyle.Flat;
+            buttonCancelar.ForeColor = Color.White;
             buttonCancelar.Location = new Point(0, 602);
             buttonCancelar.Name = "buttonCancelar";
-            buttonCancelar.Size = new Size(200, 23);
+            buttonCancelar.Size = new Size(250, 23);
             buttonCancelar.TabIndex = 4;
             buttonCancelar.Text = "Cancelar";
-            buttonCancelar.UseVisualStyleBackColor = true;
+            buttonCancelar.UseVisualStyleBackColor = false;
             buttonCancelar.Click += buttonCancelar_Click;
             // 
             // buttonAceptar
             // 
+            buttonAceptar.BackColor = Color.FromArgb(76, 175, 80);
             buttonAceptar.Dock = DockStyle.Bottom;
+            buttonAceptar.FlatStyle = FlatStyle.Flat;
+            buttonAceptar.ForeColor = Color.White;
             buttonAceptar.Location = new Point(0, 625);
             buttonAceptar.Name = "buttonAceptar";
-            buttonAceptar.Size = new Size(200, 23);
+            buttonAceptar.Size = new Size(250, 23);
             buttonAceptar.TabIndex = 3;
             buttonAceptar.Text = "Aceptar";
-            buttonAceptar.UseVisualStyleBackColor = true;
+            buttonAceptar.UseVisualStyleBackColor = false;
             buttonAceptar.Click += buttonAceptar_Click;
             // 
             // panelMenuContact
             // 
+            panelMenuContact.BackColor = Color.FromArgb(200, 200, 200);
             panelMenuContact.Controls.Add(labelFecha);
             panelMenuContact.Controls.Add(pictureBoxLogo);
             panelMenuContact.Dock = DockStyle.Top;
             panelMenuContact.Location = new Point(0, 0);
             panelMenuContact.Name = "panelMenuContact";
-            panelMenuContact.Size = new Size(200, 162);
+            panelMenuContact.Size = new Size(250, 175);
             panelMenuContact.TabIndex = 1;
             // 
             // labelFecha
             // 
-            labelFecha.Dock = DockStyle.Top;
-            labelFecha.Location = new Point(0, 144);
+            labelFecha.Dock = DockStyle.Bottom;
+            labelFecha.ForeColor = Color.Black;
+            labelFecha.Location = new Point(0, 160);
             labelFecha.Name = "labelFecha";
-            labelFecha.Size = new Size(200, 15);
+            labelFecha.Size = new Size(250, 15);
             labelFecha.TabIndex = 1;
             labelFecha.Text = "2/27/2024 9:32:09 PM";
+            labelFecha.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // pictureBoxLogo
             // 
@@ -172,7 +173,7 @@
             pictureBoxLogo.Image = (Image)resources.GetObject("pictureBoxLogo.Image");
             pictureBoxLogo.Location = new Point(0, 0);
             pictureBoxLogo.Name = "pictureBoxLogo";
-            pictureBoxLogo.Size = new Size(200, 144);
+            pictureBoxLogo.Size = new Size(250, 150);
             pictureBoxLogo.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBoxLogo.TabIndex = 0;
             pictureBoxLogo.TabStop = false;
@@ -182,14 +183,14 @@
             panelCabecera.Controls.Add(panelBusquedaArticulo);
             panelCabecera.Controls.Add(panelCabeceraVenta);
             panelCabecera.Dock = DockStyle.Top;
-            panelCabecera.Location = new Point(200, 0);
+            panelCabecera.Location = new Point(250, 0);
             panelCabecera.Name = "panelCabecera";
-            panelCabecera.Size = new Size(892, 218);
+            panelCabecera.Size = new Size(842, 218);
             panelCabecera.TabIndex = 1;
             // 
             // panelBusquedaArticulo
             // 
-            panelBusquedaArticulo.BackColor = SystemColors.ControlLightLight;
+            panelBusquedaArticulo.BackColor = Color.White;
             panelBusquedaArticulo.Controls.Add(buttonAgregar);
             panelBusquedaArticulo.Controls.Add(labelDescuentos);
             panelBusquedaArticulo.Controls.Add(labelPrecio);
@@ -199,67 +200,76 @@
             panelBusquedaArticulo.Dock = DockStyle.Fill;
             panelBusquedaArticulo.Location = new Point(317, 0);
             panelBusquedaArticulo.Name = "panelBusquedaArticulo";
-            panelBusquedaArticulo.Size = new Size(575, 218);
+            panelBusquedaArticulo.Size = new Size(525, 218);
             panelBusquedaArticulo.TabIndex = 1;
             panelBusquedaArticulo.Visible = false;
             // 
             // buttonAgregar
             // 
-            buttonAgregar.Location = new Point(263, 187);
+            buttonAgregar.BackColor = Color.FromArgb(76, 175, 80);
+            buttonAgregar.FlatStyle = FlatStyle.Flat;
+            buttonAgregar.ForeColor = Color.White;
+            buttonAgregar.Location = new Point(450, 190);
             buttonAgregar.Name = "buttonAgregar";
-            buttonAgregar.Size = new Size(250, 23);
-            buttonAgregar.TabIndex = 5;
+            buttonAgregar.Size = new Size(75, 25);
+            buttonAgregar.TabIndex = 7;
             buttonAgregar.Text = "Agregar";
-            buttonAgregar.UseVisualStyleBackColor = true;
+            buttonAgregar.UseVisualStyleBackColor = false;
             buttonAgregar.Click += buttonAgregar_Click;
             // 
             // labelDescuentos
             // 
-            labelDescuentos.AutoSize = true;
-            labelDescuentos.Location = new Point(263, 85);
+            labelDescuentos.ForeColor = Color.Black;
+            labelDescuentos.Location = new Point(180, 150);
             labelDescuentos.Name = "labelDescuentos";
-            labelDescuentos.Size = new Size(74, 15);
-            labelDescuentos.TabIndex = 4;
-            labelDescuentos.Text = "Descuentos: ";
+            labelDescuentos.Size = new Size(245, 15);
+            labelDescuentos.TabIndex = 6;
+            labelDescuentos.Text = "Descuentos: 10%";
+            labelDescuentos.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // labelPrecio
             // 
-            labelPrecio.AutoSize = true;
-            labelPrecio.Location = new Point(263, 70);
+            labelPrecio.ForeColor = Color.Black;
+            labelPrecio.Location = new Point(180, 115);
             labelPrecio.Name = "labelPrecio";
-            labelPrecio.Size = new Size(46, 15);
-            labelPrecio.TabIndex = 3;
-            labelPrecio.Text = "Precio: ";
+            labelPrecio.Size = new Size(245, 15);
+            labelPrecio.TabIndex = 5;
+            labelPrecio.Text = "Precio: $100";
+            labelPrecio.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // labelDescripcion
             // 
-            labelDescripcion.AutoSize = true;
-            labelDescripcion.Location = new Point(263, 55);
+            labelDescripcion.ForeColor = Color.Black;
+            labelDescripcion.Location = new Point(180, 80);
             labelDescripcion.Name = "labelDescripcion";
-            labelDescripcion.Size = new Size(75, 15);
-            labelDescripcion.TabIndex = 2;
-            labelDescripcion.Text = "Descripcion: ";
+            labelDescripcion.Size = new Size(245, 15);
+            labelDescripcion.TabIndex = 4;
+            labelDescripcion.Text = "Descripción: Artículo de prueba";
+            labelDescripcion.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // labelNombre
             // 
-            labelNombre.AutoSize = true;
-            labelNombre.Location = new Point(263, 40);
+            labelNombre.ForeColor = Color.Black;
+            labelNombre.Location = new Point(180, 45);
             labelNombre.Name = "labelNombre";
-            labelNombre.Size = new Size(57, 15);
-            labelNombre.TabIndex = 1;
-            labelNombre.Text = "Nombre: ";
+            labelNombre.Size = new Size(245, 15);
+            labelNombre.TabIndex = 3;
+            labelNombre.Text = "Nombre: Artículo Ejemplo";
+            labelNombre.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // pictureBoxArticulo
             // 
-            pictureBoxArticulo.Location = new Point(6, 12);
+            pictureBoxArticulo.BackColor = Color.Transparent;
+            pictureBoxArticulo.Location = new Point(15, 15);
             pictureBoxArticulo.Name = "pictureBoxArticulo";
-            pictureBoxArticulo.Size = new Size(251, 198);
+            pictureBoxArticulo.Size = new Size(150, 150);
             pictureBoxArticulo.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBoxArticulo.TabIndex = 0;
             pictureBoxArticulo.TabStop = false;
             // 
             // panelCabeceraVenta
             // 
+            panelCabeceraVenta.BackColor = Color.White;
             panelCabeceraVenta.Controls.Add(labelTotal);
             panelCabeceraVenta.Controls.Add(labelSubtotal);
             panelCabeceraVenta.Controls.Add(labelImpuestosVenta);
@@ -272,61 +282,73 @@
             // 
             // labelTotal
             // 
-            labelTotal.AutoSize = true;
-            labelTotal.Location = new Point(16, 94);
+            labelTotal.ForeColor = Color.Black;
+            labelTotal.Location = new Point(15, 150);
             labelTotal.Name = "labelTotal";
-            labelTotal.Size = new Size(38, 15);
+            labelTotal.Size = new Size(200, 15);
             labelTotal.TabIndex = 3;
-            labelTotal.Text = "Total: ";
+            labelTotal.Text = "Total: $0";
+            labelTotal.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // labelSubtotal
             // 
-            labelSubtotal.AutoSize = true;
-            labelSubtotal.Location = new Point(16, 79);
+            labelSubtotal.ForeColor = Color.Black;
+            labelSubtotal.Location = new Point(15, 115);
             labelSubtotal.Name = "labelSubtotal";
-            labelSubtotal.Size = new Size(61, 15);
+            labelSubtotal.Size = new Size(200, 15);
             labelSubtotal.TabIndex = 2;
-            labelSubtotal.Text = "Sub Total: ";
+            labelSubtotal.Text = "Subtotal: $0";
+            labelSubtotal.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // labelImpuestosVenta
             // 
-            labelImpuestosVenta.AutoSize = true;
-            labelImpuestosVenta.Location = new Point(16, 64);
+            labelImpuestosVenta.ForeColor = Color.Black;
+            labelImpuestosVenta.Location = new Point(15, 80);
             labelImpuestosVenta.Name = "labelImpuestosVenta";
-            labelImpuestosVenta.Size = new Size(68, 15);
+            labelImpuestosVenta.Size = new Size(200, 15);
             labelImpuestosVenta.TabIndex = 1;
-            labelImpuestosVenta.Text = "Impuestos: ";
+            labelImpuestosVenta.Text = "Impuestos: $0";
+            labelImpuestosVenta.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // labelDescuentoVenta
             // 
-            labelDescuentoVenta.AutoSize = true;
-            labelDescuentoVenta.Location = new Point(16, 49);
+            labelDescuentoVenta.ForeColor = Color.Black;
+            labelDescuentoVenta.Location = new Point(15, 45);
             labelDescuentoVenta.Name = "labelDescuentoVenta";
-            labelDescuentoVenta.Size = new Size(74, 15);
+            labelDescuentoVenta.Size = new Size(200, 15);
             labelDescuentoVenta.TabIndex = 0;
-            labelDescuentoVenta.Text = "Descuentos: ";
+            labelDescuentoVenta.Text = "Descuento: $0";
+            labelDescuentoVenta.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // panelDetalleVenta
             // 
             panelDetalleVenta.Controls.Add(dataGridViewDetalleVenta);
             panelDetalleVenta.Dock = DockStyle.Fill;
-            panelDetalleVenta.Location = new Point(200, 218);
+            panelDetalleVenta.Location = new Point(250, 218);
             panelDetalleVenta.Name = "panelDetalleVenta";
-            panelDetalleVenta.Size = new Size(892, 430);
+            panelDetalleVenta.Size = new Size(842, 430);
             panelDetalleVenta.TabIndex = 2;
             // 
             // dataGridViewDetalleVenta
             // 
             dataGridViewDetalleVenta.AllowUserToAddRows = false;
+            dataGridViewDetalleVenta.AllowUserToDeleteRows = false;
+            dataGridViewDetalleVenta.AllowUserToOrderColumns = true;
+            dataGridViewDetalleVenta.AllowUserToResizeRows = false;
+            dataGridViewDetalleVenta.BackgroundColor = Color.White;
+            dataGridViewDetalleVenta.BorderStyle = BorderStyle.None;
+            dataGridViewDetalleVenta.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
             dataGridViewDetalleVenta.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewDetalleVenta.Columns.AddRange(new DataGridViewColumn[] { ColumnNombre, ColumnDescripcion, ColumnPrecio, ColumnCantidad, ColumnPorcentajeDescuento, ColumnDescuento, ColumnIva });
             dataGridViewDetalleVenta.Dock = DockStyle.Fill;
             dataGridViewDetalleVenta.Location = new Point(0, 0);
             dataGridViewDetalleVenta.Name = "dataGridViewDetalleVenta";
+            dataGridViewDetalleVenta.ReadOnly = true;
+            dataGridViewDetalleVenta.RowHeadersVisible = false;
             dataGridViewDetalleVenta.RowTemplate.Height = 25;
-            dataGridViewDetalleVenta.Size = new Size(892, 430);
+            dataGridViewDetalleVenta.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridViewDetalleVenta.Size = new Size(842, 430);
             dataGridViewDetalleVenta.TabIndex = 0;
-            dataGridViewDetalleVenta.CellEndEdit += dataGridViewDetalleVenta_CellEndEdit;
             // 
             // ColumnNombre
             // 
@@ -336,10 +358,9 @@
             // 
             // ColumnDescripcion
             // 
-            ColumnDescripcion.HeaderText = "Descripcion";
+            ColumnDescripcion.HeaderText = "Descripción";
             ColumnDescripcion.Name = "ColumnDescripcion";
             ColumnDescripcion.ReadOnly = true;
-            ColumnDescripcion.Width = 250;
             // 
             // ColumnPrecio
             // 
@@ -351,13 +372,13 @@
             // 
             ColumnCantidad.HeaderText = "Cantidad";
             ColumnCantidad.Name = "ColumnCantidad";
+            ColumnCantidad.ReadOnly = true;
             // 
             // ColumnPorcentajeDescuento
             // 
-            ColumnPorcentajeDescuento.HeaderText = "%";
+            ColumnPorcentajeDescuento.HeaderText = "Descuento (%)";
             ColumnPorcentajeDescuento.Name = "ColumnPorcentajeDescuento";
             ColumnPorcentajeDescuento.ReadOnly = true;
-            ColumnPorcentajeDescuento.Width = 50;
             // 
             // ColumnDescuento
             // 
@@ -367,7 +388,7 @@
             // 
             // ColumnIva
             // 
-            ColumnIva.HeaderText = "Iva";
+            ColumnIva.HeaderText = "IVA";
             ColumnIva.Name = "ColumnIva";
             ColumnIva.ReadOnly = true;
             // 
@@ -380,7 +401,7 @@
             Controls.Add(panelCabecera);
             Controls.Add(panelMenuLateral);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Ventas Mostrador";
             panelMenuLateral.ResumeLayout(false);
             panelBusqueda.ResumeLayout(false);
             panelBusqueda.PerformLayout();
@@ -388,42 +409,38 @@
             ((System.ComponentModel.ISupportInitialize)pictureBoxLogo).EndInit();
             panelCabecera.ResumeLayout(false);
             panelBusquedaArticulo.ResumeLayout(false);
-            panelBusquedaArticulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxArticulo).EndInit();
             panelCabeceraVenta.ResumeLayout(false);
-            panelCabeceraVenta.PerformLayout();
             panelDetalleVenta.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridViewDetalleVenta).EndInit();
             ResumeLayout(false);
         }
 
-        #endregion
-
         private Panel panelMenuLateral;
-        private Panel panelMenuContact;
-        private Label labelFecha;
-        private PictureBox pictureBoxLogo;
-        private Button buttonCancelar;
-        private Button buttonAceptar;
-        private Panel panelCabecera;
-        private Panel panelBusquedaArticulo;
-        private Panel panelCabeceraVenta;
-        private Panel panelDetalleVenta;
+        private Panel panelResultadoBusqueda;
         private Panel panelBusqueda;
         private TextBox textBoxBusqueda;
         private Button buttonBusqueda;
-        private Panel panelResultadoBusqueda;
-        private PictureBox pictureBoxArticulo;
+        private Button buttonCancelar;
+        private Button buttonAceptar;
+        private Panel panelMenuContact;
+        private Label labelFecha;
+        private PictureBox pictureBoxLogo;
+        private Panel panelCabecera;
+        private Panel panelBusquedaArticulo;
+        private Button buttonAgregar;
+        private Label labelDescuentos;
         private Label labelPrecio;
         private Label labelDescripcion;
         private Label labelNombre;
-        private Label labelDescuentos;
-        private DataGridView dataGridViewDetalleVenta;
-        private Button buttonAgregar;
+        private PictureBox pictureBoxArticulo;
+        private Panel panelCabeceraVenta;
         private Label labelTotal;
         private Label labelSubtotal;
         private Label labelImpuestosVenta;
         private Label labelDescuentoVenta;
+        private Panel panelDetalleVenta;
+        private DataGridView dataGridViewDetalleVenta;
         private DataGridViewTextBoxColumn ColumnNombre;
         private DataGridViewTextBoxColumn ColumnDescripcion;
         private DataGridViewTextBoxColumn ColumnPrecio;
