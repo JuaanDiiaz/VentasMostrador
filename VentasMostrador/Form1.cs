@@ -100,36 +100,43 @@ namespace VentasMostrador
                 var descuento = articulo.Precio * (articulo.Descuento / 100);
                 var precioConDescuento = articulo.Precio - descuento;
                 var iva = precioConDescuento * (decimal)0.16;
-                dataGridViewDetalleVenta.Rows.Add(articulo.Nombre, articulo.Descripcion, articulo.Precio, 1, articulo.Descuento, descuento, iva);
+                var total = precioConDescuento + iva;
+                dataGridViewDetalleVenta.Rows.Add(articulo.Id, articulo.Nombre, articulo.Descripcion, articulo.Precio, 1, articulo.Descuento, descuento, iva, total);
             }
             else
             {
                 var row = dataGridViewDetalleVenta.Rows[rowIndex];
                 var cantidad = Convert.ToInt32(row.Cells["ColumnCantidad"].Value) + 1;
-                var descuento = articulo.Precio * (articulo.Descuento / 100) * cantidad;
-                var precioConDescuento = (articulo.Precio * cantidad) - descuento;
+                var precio = Convert.ToDecimal(row.Cells["ColumnPrecio"].Value);
+                var descuento = Convert.ToDecimal(row.Cells["ColumnPorcentajeDescuento"].Value);
+
+                var descuentoFinal = (precio * cantidad) * (descuento / 100);
+                var precioConDescuento = (precio * cantidad) - descuentoFinal;
                 var iva = precioConDescuento * (decimal)0.16;
+                var total = precioConDescuento + iva;
                 row.Cells["ColumnCantidad"].Value = cantidad;
-                row.Cells["ColumnDescuento"].Value = descuento;
+                row.Cells["ColumnDescuento"].Value = descuentoFinal;
                 row.Cells["ColumnIva"].Value = iva;
+                row.Cells["ColumnTotal"].Value = total;
             }
             ActualizarTotales();
         }
 
         private void dataGridViewDetalleVenta_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == dataGridViewDetalleVenta.Columns["ColumnCantidad"].Index)
-            {
-                var row = dataGridViewDetalleVenta.Rows[e.RowIndex];
-                var articulo = _dataContex.BuscarPorNombre(row.Cells["ColumnNombre"].Value.ToString());
-                var cantidad = Convert.ToInt32(row.Cells["ColumnCantidad"].Value);
-                var descuento = articulo.Precio * (articulo.Descuento / 100) * cantidad;
-                var precioConDescuento = (articulo.Precio * cantidad) - descuento;
-                var iva = precioConDescuento * (decimal)0.16;
-                row.Cells["ColumnDescuento"].Value = descuento;
-                row.Cells["ColumnIva"].Value = iva;
-                ActualizarTotales();
-            }
+            var row = dataGridViewDetalleVenta.Rows[e.RowIndex];
+            var precio = Convert.ToDecimal(row.Cells["ColumnPrecio"].Value);
+            var descuento = Convert.ToDecimal(row.Cells["ColumnPorcentajeDescuento"].Value);
+            var cantidad = Convert.ToInt32(row.Cells["ColumnCantidad"].Value);
+
+            var descuentoFinal = (precio * cantidad) * (descuento / 100);
+            var precioConDescuento = (precio * cantidad) - descuentoFinal;
+            var iva = precioConDescuento * (decimal)0.16;
+            var total = precioConDescuento + iva;
+            row.Cells["ColumnDescuento"].Value = descuentoFinal;
+            row.Cells["ColumnIva"].Value = iva;
+            row.Cells["ColumnTotal"].Value = total;
+            ActualizarTotales();
         }
 
         private void ActualizarTotales()

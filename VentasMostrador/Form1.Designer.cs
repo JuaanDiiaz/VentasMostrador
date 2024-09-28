@@ -41,6 +41,7 @@
             labelDescuentoVenta = new Label();
             panelDetalleVenta = new Panel();
             dataGridViewDetalleVenta = new DataGridView();
+            ColumnId = new DataGridViewTextBoxColumn();
             ColumnNombre = new DataGridViewTextBoxColumn();
             ColumnDescripcion = new DataGridViewTextBoxColumn();
             ColumnPrecio = new DataGridViewTextBoxColumn();
@@ -48,6 +49,7 @@
             ColumnPorcentajeDescuento = new DataGridViewTextBoxColumn();
             ColumnDescuento = new DataGridViewTextBoxColumn();
             ColumnIva = new DataGridViewTextBoxColumn();
+            ColumnTotal = new DataGridViewTextBoxColumn();
             panelMenuLateral.SuspendLayout();
             panelBusqueda.SuspendLayout();
             panelMenuContact.SuspendLayout();
@@ -173,7 +175,7 @@
             pictureBoxLogo.Image = (Image)resources.GetObject("pictureBoxLogo.Image");
             pictureBoxLogo.Location = new Point(0, 0);
             pictureBoxLogo.Name = "pictureBoxLogo";
-            pictureBoxLogo.Size = new Size(250, 150);
+            pictureBoxLogo.Size = new Size(250, 157);
             pictureBoxLogo.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBoxLogo.TabIndex = 0;
             pictureBoxLogo.TabStop = false;
@@ -185,7 +187,7 @@
             panelCabecera.Dock = DockStyle.Top;
             panelCabecera.Location = new Point(250, 0);
             panelCabecera.Name = "panelCabecera";
-            panelCabecera.Size = new Size(842, 218);
+            panelCabecera.Size = new Size(903, 200);
             panelCabecera.TabIndex = 1;
             // 
             // panelBusquedaArticulo
@@ -200,7 +202,7 @@
             panelBusquedaArticulo.Dock = DockStyle.Fill;
             panelBusquedaArticulo.Location = new Point(317, 0);
             panelBusquedaArticulo.Name = "panelBusquedaArticulo";
-            panelBusquedaArticulo.Size = new Size(525, 218);
+            panelBusquedaArticulo.Size = new Size(586, 200);
             panelBusquedaArticulo.TabIndex = 1;
             panelBusquedaArticulo.Visible = false;
             // 
@@ -209,9 +211,9 @@
             buttonAgregar.BackColor = Color.FromArgb(76, 175, 80);
             buttonAgregar.FlatStyle = FlatStyle.Flat;
             buttonAgregar.ForeColor = Color.White;
-            buttonAgregar.Location = new Point(450, 190);
+            buttonAgregar.Location = new Point(15, 171);
             buttonAgregar.Name = "buttonAgregar";
-            buttonAgregar.Size = new Size(75, 25);
+            buttonAgregar.Size = new Size(150, 25);
             buttonAgregar.TabIndex = 7;
             buttonAgregar.Text = "Agregar";
             buttonAgregar.UseVisualStyleBackColor = false;
@@ -269,7 +271,7 @@
             // 
             // panelCabeceraVenta
             // 
-            panelCabeceraVenta.BackColor = Color.White;
+            panelCabeceraVenta.BackColor = SystemColors.ButtonFace;
             panelCabeceraVenta.Controls.Add(labelTotal);
             panelCabeceraVenta.Controls.Add(labelSubtotal);
             panelCabeceraVenta.Controls.Add(labelImpuestosVenta);
@@ -277,7 +279,7 @@
             panelCabeceraVenta.Dock = DockStyle.Left;
             panelCabeceraVenta.Location = new Point(0, 0);
             panelCabeceraVenta.Name = "panelCabeceraVenta";
-            panelCabeceraVenta.Size = new Size(317, 218);
+            panelCabeceraVenta.Size = new Size(317, 200);
             panelCabeceraVenta.TabIndex = 0;
             // 
             // labelTotal
@@ -324,9 +326,9 @@
             // 
             panelDetalleVenta.Controls.Add(dataGridViewDetalleVenta);
             panelDetalleVenta.Dock = DockStyle.Fill;
-            panelDetalleVenta.Location = new Point(250, 218);
+            panelDetalleVenta.Location = new Point(250, 200);
             panelDetalleVenta.Name = "panelDetalleVenta";
-            panelDetalleVenta.Size = new Size(842, 430);
+            panelDetalleVenta.Size = new Size(903, 448);
             panelDetalleVenta.TabIndex = 2;
             // 
             // dataGridViewDetalleVenta
@@ -339,16 +341,22 @@
             dataGridViewDetalleVenta.BorderStyle = BorderStyle.None;
             dataGridViewDetalleVenta.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
             dataGridViewDetalleVenta.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewDetalleVenta.Columns.AddRange(new DataGridViewColumn[] { ColumnNombre, ColumnDescripcion, ColumnPrecio, ColumnCantidad, ColumnPorcentajeDescuento, ColumnDescuento, ColumnIva });
+            dataGridViewDetalleVenta.Columns.AddRange(new DataGridViewColumn[] { ColumnId, ColumnNombre, ColumnDescripcion, ColumnPrecio, ColumnCantidad, ColumnPorcentajeDescuento, ColumnDescuento, ColumnIva, ColumnTotal });
             dataGridViewDetalleVenta.Dock = DockStyle.Fill;
             dataGridViewDetalleVenta.Location = new Point(0, 0);
             dataGridViewDetalleVenta.Name = "dataGridViewDetalleVenta";
-            dataGridViewDetalleVenta.ReadOnly = true;
             dataGridViewDetalleVenta.RowHeadersVisible = false;
             dataGridViewDetalleVenta.RowTemplate.Height = 25;
             dataGridViewDetalleVenta.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridViewDetalleVenta.Size = new Size(842, 430);
+            dataGridViewDetalleVenta.Size = new Size(903, 448);
             dataGridViewDetalleVenta.TabIndex = 0;
+            dataGridViewDetalleVenta.CellEndEdit += dataGridViewDetalleVenta_CellEndEdit;
+            // 
+            // ColumnId
+            // 
+            ColumnId.HeaderText = "Codigo";
+            ColumnId.Name = "ColumnId";
+            ColumnId.ReadOnly = true;
             // 
             // ColumnNombre
             // 
@@ -366,19 +374,16 @@
             // 
             ColumnPrecio.HeaderText = "Precio";
             ColumnPrecio.Name = "ColumnPrecio";
-            ColumnPrecio.ReadOnly = true;
             // 
             // ColumnCantidad
             // 
             ColumnCantidad.HeaderText = "Cantidad";
             ColumnCantidad.Name = "ColumnCantidad";
-            ColumnCantidad.ReadOnly = true;
             // 
             // ColumnPorcentajeDescuento
             // 
             ColumnPorcentajeDescuento.HeaderText = "Descuento (%)";
             ColumnPorcentajeDescuento.Name = "ColumnPorcentajeDescuento";
-            ColumnPorcentajeDescuento.ReadOnly = true;
             // 
             // ColumnDescuento
             // 
@@ -392,11 +397,16 @@
             ColumnIva.Name = "ColumnIva";
             ColumnIva.ReadOnly = true;
             // 
+            // ColumnTotal
+            // 
+            ColumnTotal.HeaderText = "Total";
+            ColumnTotal.Name = "ColumnTotal";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1092, 648);
+            ClientSize = new Size(1153, 648);
             Controls.Add(panelDetalleVenta);
             Controls.Add(panelCabecera);
             Controls.Add(panelMenuLateral);
@@ -441,6 +451,7 @@
         private Label labelDescuentoVenta;
         private Panel panelDetalleVenta;
         private DataGridView dataGridViewDetalleVenta;
+        private DataGridViewTextBoxColumn ColumnId;
         private DataGridViewTextBoxColumn ColumnNombre;
         private DataGridViewTextBoxColumn ColumnDescripcion;
         private DataGridViewTextBoxColumn ColumnPrecio;
@@ -448,5 +459,6 @@
         private DataGridViewTextBoxColumn ColumnPorcentajeDescuento;
         private DataGridViewTextBoxColumn ColumnDescuento;
         private DataGridViewTextBoxColumn ColumnIva;
+        private DataGridViewTextBoxColumn ColumnTotal;
     }
 }
