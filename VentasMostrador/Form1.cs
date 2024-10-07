@@ -160,7 +160,7 @@ namespace VentasMostrador
                 InvoiceForm invoiceForm = new InvoiceForm();
                 invoiceForm.ShowDialog();
             }
-            FinalizarVenta();
+            FinalizarVenta(result == DialogResult.Yes);
         }
 
         private void buttonCancelar_Click(object sender, EventArgs e)
@@ -175,7 +175,7 @@ namespace VentasMostrador
             _dataContex = new DataBaseSimulation();
         }
 
-        private void FinalizarVenta()
+        private void FinalizarVenta(bool esFactura)
         {
             folioTicket = folioTicket + 1;
             var venta = new
@@ -209,7 +209,8 @@ namespace VentasMostrador
             };
 
             var json = JsonConvert.SerializeObject(venta, Newtonsoft.Json.Formatting.Indented);
-            MessageBox.Show($"Venta finalizada con folio {folioTicket}");
+            var message = esFactura ? "Factura" : "Venta";
+            MessageBox.Show($"{message} finalizada con folio {folioTicket}");
             //PostToApiAsync("http://ise.somee.com/api/Sales", json).Wait();
             restart();
         }

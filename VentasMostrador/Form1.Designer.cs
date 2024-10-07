@@ -411,6 +411,7 @@
             Controls.Add(panelCabecera);
             Controls.Add(panelMenuLateral);
             Name = "Form1";
+            StartPosition = FormStartPosition.CenterParent;
             Text = "Ventas Mostrador";
             panelMenuLateral.ResumeLayout(false);
             panelBusqueda.ResumeLayout(false);

@@ -22,7 +22,7 @@ namespace VentasMostrador
 
         private void buttonAceptar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Factura generada correctamente");
+            MessageBox.Show("Factura generada y enviada correctamente");
             this.Dispose();
         }
 

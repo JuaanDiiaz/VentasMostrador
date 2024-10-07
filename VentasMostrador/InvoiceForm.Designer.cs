@@ -112,6 +112,7 @@
             Controls.Add(textBoxRazonSocial);
             FormBorderStyle = FormBorderStyle.None;
             Name = "InvoiceForm";
+            StartPosition = FormStartPosition.CenterParent;
             Text = "InvoiceForm";
             ResumeLayout(false);
             PerformLayout();
