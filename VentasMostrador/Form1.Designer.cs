@@ -184,8 +184,8 @@
             // 
             panelCabecera.Controls.Add(panelBusquedaArticulo);
             panelCabecera.Controls.Add(panelCabeceraVenta);
-            panelCabecera.Dock = DockStyle.Top;
-            panelCabecera.Location = new Point(250, 0);
+            panelCabecera.Dock = DockStyle.Bottom;
+            panelCabecera.Location = new Point(250, 448);
             panelCabecera.Name = "panelCabecera";
             panelCabecera.Size = new Size(903, 200);
             panelCabecera.TabIndex = 1;
@@ -200,7 +200,7 @@
             panelBusquedaArticulo.Controls.Add(labelNombre);
             panelBusquedaArticulo.Controls.Add(pictureBoxArticulo);
             panelBusquedaArticulo.Dock = DockStyle.Fill;
-            panelBusquedaArticulo.Location = new Point(317, 0);
+            panelBusquedaArticulo.Location = new Point(0, 0);
             panelBusquedaArticulo.Name = "panelBusquedaArticulo";
             panelBusquedaArticulo.Size = new Size(586, 200);
             panelBusquedaArticulo.TabIndex = 1;
@@ -276,8 +276,8 @@
             panelCabeceraVenta.Controls.Add(labelSubtotal);
             panelCabeceraVenta.Controls.Add(labelImpuestosVenta);
             panelCabeceraVenta.Controls.Add(labelDescuentoVenta);
-            panelCabeceraVenta.Dock = DockStyle.Left;
-            panelCabeceraVenta.Location = new Point(0, 0);
+            panelCabeceraVenta.Dock = DockStyle.Right;
+            panelCabeceraVenta.Location = new Point(586, 0);
             panelCabeceraVenta.Name = "panelCabeceraVenta";
             panelCabeceraVenta.Size = new Size(317, 200);
             panelCabeceraVenta.TabIndex = 0;
@@ -326,7 +326,7 @@
             // 
             panelDetalleVenta.Controls.Add(dataGridViewDetalleVenta);
             panelDetalleVenta.Dock = DockStyle.Fill;
-            panelDetalleVenta.Location = new Point(250, 200);
+            panelDetalleVenta.Location = new Point(250, 0);
             panelDetalleVenta.Name = "panelDetalleVenta";
             panelDetalleVenta.Size = new Size(903, 448);
             panelDetalleVenta.TabIndex = 2;
@@ -337,7 +337,7 @@
             dataGridViewDetalleVenta.AllowUserToDeleteRows = false;
             dataGridViewDetalleVenta.AllowUserToOrderColumns = true;
             dataGridViewDetalleVenta.AllowUserToResizeRows = false;
-            dataGridViewDetalleVenta.BackgroundColor = Color.White;
+            dataGridViewDetalleVenta.BackgroundColor = Color.WhiteSmoke;
             dataGridViewDetalleVenta.BorderStyle = BorderStyle.None;
             dataGridViewDetalleVenta.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
             dataGridViewDetalleVenta.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;

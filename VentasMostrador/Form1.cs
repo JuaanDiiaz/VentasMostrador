@@ -154,6 +154,12 @@ namespace VentasMostrador
 
         private void buttonAceptar_Click(object sender, EventArgs e)
         {
+            var result = MessageBox.Show("¿Desea facturar la venta?", "Finalizar venta", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                InvoiceForm invoiceForm = new InvoiceForm();
+                invoiceForm.ShowDialog();
+            }
             FinalizarVenta();
         }
 
